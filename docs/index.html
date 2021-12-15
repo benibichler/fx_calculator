@@ -9,11 +9,7 @@
     <link rel="stylesheet" href="style.css">   
     <script src="app.js" async></script>
     <link rel="manifest" href="manifest.webmanifest">
-    <script>        
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js');
-        }
-    </script>
+    
     <meta name="theme-color" content="#ccffcc">
     <link rel="apple-touch-icon" href="icon192.png">
 
@@ -33,6 +29,21 @@
             <select title="Output Currency" id="output-currency" name="output-currency"></select>
         </section>
         <button>Calculate</button>
+        
+        <script>        
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('sw.js');
+            }
+        </script>
+
+        <article>
+            <h2>Install App</h2>
+            <p>Do you want to install the app locally and for offline use?</p>
+            <button data-id="install-yes">Yes</button>
+            <button data-id="install-no">No</button>
+        </article>
+
     </main>
+    
 </body>
 </html>
